@@ -1,2 +1,2 @@
 # ProducerConsumer
-Producer Consumer problem simulation
+Producer Consumer problem simulation with GUI
