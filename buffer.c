@@ -18,7 +18,6 @@ void insert(int item){ //placing order
     count++;
     printf("inserted: %d | count: %d/%d\n", item, count, SIZE);
 }
-
 int removeItem(){ //picking order from table
     if (count == 0) {
         printf("buffer empty\n");
@@ -30,7 +29,6 @@ int removeItem(){ //picking order from table
     printf("removed: %d | count: %d/%d\n", item, count, SIZE);
     return item;
 }
-
 int main(){
     insert(1);
     insert(2);
