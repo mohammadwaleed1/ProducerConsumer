@@ -14,10 +14,6 @@ void init() {       // initializing the mutex and sema
     sem_init(&empty, 0, SIZE);  //sema empty to used by chef (value > 0) table empty (count = 0) table full
 }
 void insert(int item){ //placing order
-    if (count == SIZE) {
-        printf("buffer full\n");
-        return;
-    }
     sem_wait(&empty);
     pthread_mutex_lock(&lock);
     buffer[in] = item;
@@ -28,10 +24,6 @@ void insert(int item){ //placing order
     sem_post(&full);
 }
 int removeItem(){ //picking order from table
-    if (count == 0) {
-        printf("buffer empty\n");
-        return -1;
-    }
     sem_wait(&full);
     pthread_mutex_lock(&lock);
     int item = buffer[out];
