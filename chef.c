@@ -16,18 +16,3 @@ void* producer(void* arg){
     printf("producer %d done\n", id);
     return NULL;
 }
-int main(){
-    init();
-    pthread_t threads[num_prod];
-    int ids[num_prod];
-
-    for (int i = 0; i < num_prod; i++) {
-        ids[i] = i + 1;
-        pthread_create(&threads[i], NULL, producer, &ids[i]);
-    }
-    for (int i = 0; i < num_prod; i++) {
-        pthread_join(threads[i], NULL);
-    }
-    destroy();
-    return 0;
-}
