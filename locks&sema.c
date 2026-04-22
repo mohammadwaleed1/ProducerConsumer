@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <pthread.h>
 #include <semaphore.h>
+
 pthread_mutex_t lock;
 sem_t full; //sema lock for waiter to see if there are any orders to pick (value > 0) and to indicate no order (value =0)
 sem_t empty;//sema lock to for chef to see if the table is empty to place the dish (value > 0) and to indicate table is full(value =0)
