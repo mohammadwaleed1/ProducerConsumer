@@ -12,5 +12,5 @@ extern sem_t full, empty;
 void init();
 void insert(int item);
 int removeItem();
-void cleanup();
+void destroy();
 #endif
