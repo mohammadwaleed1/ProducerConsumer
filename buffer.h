@@ -2,7 +2,6 @@
 #define BUFFER_H
 #include <pthread.h>
 #include <semaphore.h>
-
 #define SIZE 5
 
 extern int buffer[SIZE];
