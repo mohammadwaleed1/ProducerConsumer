@@ -1,3 +1,5 @@
+//in this we are just making the function not applying the locks (mutex & sema ) we can directly apply locks here by initializing the mutex and sema 
+//at first place but to make code look cleaner locks are initialized in other file and then locks applied in third file
 #include <stdio.h>
 #define SIZE 5 //subject to change 
 
