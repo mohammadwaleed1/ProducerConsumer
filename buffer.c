@@ -1,3 +1,4 @@
+#include "logger.h"
 #include <stdio.h>
 #include "buffer.h" //made the func declaration in header file defination here
 
