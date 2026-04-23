@@ -6,7 +6,7 @@ int in = 0;         //insert index
 int out = 0;        // remove index
 int count = 0;      // to keep check for buffer overflow
 pthread_mutex_t lock;
-sem_t *full, *empty;
+sem_t full, empty;
 
 void init() {       // initializing the mutex and sema
     pthread_mutex_init(&lock, NULL);    // mutex lock to maintain sync between waiter and chef
