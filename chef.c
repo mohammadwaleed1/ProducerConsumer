@@ -15,4 +15,6 @@ void* producer(void* arg){
     }
     printf("producer %d done\n", id);
     return NULL;
+    
 }
+
