@@ -1,5 +1,6 @@
 #include "logger.h"
 #include <stdio.h>
+#include <fcntl.h> //for O_CREAT error
 #include "buffer.h" //made the func declaration in header file defination here
 
 int buffer[SIZE];   // shared buffer memory
